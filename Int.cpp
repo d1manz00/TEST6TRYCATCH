@@ -6,7 +6,7 @@ istream & operator >> (istream & is, Int & ob)
     try {
         long int a;
         is >> a;
-        if ((a >= 100000000) || (a <= -10000000)) throw runtime_error ("much/little in input");
+        if ((a >= 2147483647) || (a <= -2147483648)) throw runtime_error ("much/little in input");
         else ob.x = a;
     }
     catch (const exception&error)
@@ -27,7 +27,7 @@ Int operator + (const Int &firstOb, const Int &secondOb)
     Int result;
     try {
         long int a = firstOb.x + secondOb.x;
-        if ((a >= 100000000) || (a <= -10000000)) throw runtime_error ("much/little in add");
+        if ((a >= 2147483647) || (a <= -2147483648)) throw runtime_error ("much/little in add");
         else result.x = firstOb.x + secondOb.x;
     }
     catch (const exception&error)
@@ -42,7 +42,7 @@ Int operator - (const Int &firstOb, const Int &secondOb)
     Int result;
     try {
         long int a = firstOb.x - secondOb.x;
-        if ((a >= 100000000) || (a <= -10000000)) throw runtime_error ("much/little in sub");
+        if ((a >= 2147483647) || (a <= -2147483648)) throw runtime_error ("much/little in sub");
         else result.x = firstOb.x - secondOb.x;
     }
     catch (const exception&error)
@@ -57,7 +57,7 @@ Int operator * (const Int &firstOb, const Int &secondOb)
     Int result;
     try {
         long int a = firstOb.x * secondOb.x;
-        if ((a >= 100000000) || (a <= -10000000)) throw runtime_error ("much/little in mul");
+        if ((a >= 2147483647) || (a <= -2147483648)) throw runtime_error ("much/little in mul");
         else result.x = firstOb.x * secondOb.x;
     }
     catch (const exception&error)
@@ -72,7 +72,7 @@ Int operator / (const Int &firstOb, const Int &secondOb)
     Int result;
     try {
         long int a = firstOb.x / secondOb.x;
-        if ((a >= 100000000) || (a <= -10000000)) throw runtime_error ("much/little in div");
+        if ((a >= 2147483647) || (a <= -2147483648)) throw runtime_error ("much/little in div");
         else result.x = firstOb.x / secondOb.x;
     }
     catch (const exception&error)
@@ -87,7 +87,7 @@ Int operator % (const Int &firstOb, const Int &secondOb)
     Int result;
     try {
         long int a = firstOb.x % secondOb.x;
-        if ((a >= 100000000) || (a <= -10000000)) throw runtime_error ("much/little in mod");
+        if ((a >= 2147483647) || (a <= -2147483648)) throw runtime_error ("much/little in mod");
         else result.x = firstOb.x % secondOb.x;
     }
     catch (const exception&error)
